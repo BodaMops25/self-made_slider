@@ -56,10 +56,3 @@ function BodaSlider(sliderSelector, options = {}) {
 
   this.pagination.setPagination()
 }
-
-const bodaSlider = new BodaSlider('.boda-slider', {
-  pagination: {
-    type: 'numeric',
-    el: '.display-slide-num'
-  }
-})
