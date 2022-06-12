@@ -43,7 +43,7 @@ function BodaSlider(sliderSelector, options = {}) {
     type: options.pagination.type,
     el: this.sliderContainer.querySelector(options.pagination.el),
     setPagination: () => {
-      if(this.pagination.el) paginationCallback(this.pagination.type, this.slider.slide, this.slider.maxSlide)
+      if(this.pagination.el) this.pagination.paginationCallback(this.pagination.type, this.slider.slide, this.slider.maxSlide)
     },
     paginationCallback: (paginationType, curSlide, maxSlide) => {
       if(this.pagination.type = 'numeric') this.pagination.el.innerText = this.slider.slide + 1 + '/' +  this.slider.maxSlide
