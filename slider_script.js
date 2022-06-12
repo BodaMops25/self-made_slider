@@ -53,6 +53,20 @@ function BodaSlider(sliderSelector, options = {}) {
 
   this.navigation.next?.addEventListener('click', () => this.slider.move(1))
   this.navigation.prev?.addEventListener('click', () => this.slider.move(-1))
+  
+  document.head.insertAdjacentHTML('beforeend', `
+    <style>
+      ${sliderSelector} ${options.nodes.slidesContainer || '.slides-container'} {
+        display: flex;
+        overflow: hidden;
+      }
+      
+      ${sliderSelector} ${options.nodes.slidesContainer || '.slides-container'} > * {
+        flex-shrink: 0;
+        transition: ${options.slidesMovingTransition || '.1s'};
+      }
+    </style>
+  `)
 
   this.pagination.setPagination()
 }
