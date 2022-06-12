@@ -1,7 +1,7 @@
 function BodaSlider(sliderSelector, options = {}) {
   this.sliderContainer = document.querySelector(sliderSelector)
   this.slider = {
-    el: this.sliderContainer.querySelector('.slides-container') || this.sliderContainer.querySelector(option.nodes.slidesContainer),
+    el: this.sliderContainer.querySelector('.slides-container') || this.sliderContainer.querySelector(options.nodes.slidesContainer),
     slide: 0,
 
     get firstSlideMargin() {
